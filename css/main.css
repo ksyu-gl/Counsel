@@ -340,6 +340,8 @@ p {
 .review {
   padding: 125px 0 110px;
   background-image: url("../img/Background.png");
+  -webkit-background-size: cover;
+          background-size: cover;
   color: #ffffff; }
   .review__block {
     margin: 0 auto;
@@ -460,12 +462,21 @@ p {
   .copyright a {
     color: #fde428; }
 
-.col-social {
-  text-align: right; }
-
 .social-icons__list {
-  list-style-type: none;
-  margin-bottom: 0; }
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0;
+  list-style-type: none; }
 
 .social-icons__item {
   display: inline-block;

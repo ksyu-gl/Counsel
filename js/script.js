@@ -71,21 +71,14 @@ function init () {
 // SLIDER
 
 $('.review__block').slick({
-    dots: true,
+    dots: false,
+    arrows: false,
     infinite: true,
     speed: 300,
+    adaptiveHeight: true,
     slidesToShow: 1,
-    adaptiveHeight: true
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 500,
   });
-
-// $(document).ready(function(){
-//     $('.review__block').slick({
-//         dots: true,
-//         infinite: true,
-//         speed: 300,
-//         slidesToShow: 1,
-//         adaptiveHeight: true
-//     });
-// });
-
  
