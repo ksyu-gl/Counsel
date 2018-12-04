@@ -291,14 +291,17 @@
           </button>
         </div>
         <div class="modal-body">
-          <p><input type="text" placeholder="Your name" class="form-control"></p>
-          <p><input type="text" placeholder="Your name company" class="form-control"></p>
-          <p><input type="email" placeholder="Your email" class="form-control"></p>
-          <p><textarea type="text" placeholder="Your comment" class="form-control"></textarea></p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Send message</button>
+          <div class="form-container">
+            <div id="note"></div>
+            <div id="fields">
+              <form action="" id="ajax-contact-form">
+                <input type="text" placeholder="Your name" class="form-control">
+                <input type="email" placeholder="Your email" class="form-control">
+                <textarea type="text" placeholder="Your comment" class="form-control"></textarea>
+                <input type="submit" name="submit" class="form-button" value="Send">
+              </form>  
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -309,7 +312,8 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="slick/slick/slick.min.js"></script>
+  <script src="slick/slick/slick.min.js"></script>
+  <script src="js/contactform.js"></script>
   <script src="js/script.js"></script>
 </body>
 
