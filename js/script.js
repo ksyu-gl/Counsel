@@ -7,7 +7,7 @@ $(window).scroll(function () {
 function parallax() {
   var scrolled = $(window).scrollTop();
   $('.main-bg').css('top', -(scrolled * 0.1) + 'px');
-  $('.banner').css('top', 50 + (scrolled * 0.1) + '%');
+//   $('.banner').css('top', 50 + (scrolled * 0.1) + '%');
   $('.banner').css('opacity', 1 - (scrolled * 0.01) / 10);
   $('.header').css('top', 50 + (scrolled * 0.1) + '%');
   $('.header').css('opacity', 1 - (scrolled * 0.01) / 10);

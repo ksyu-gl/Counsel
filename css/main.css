@@ -106,7 +106,10 @@ a:hover {
   height: 31px; }
 
 .banner {
-  padding: 285px 0 290px 0; }
+  position: absolute;
+  top: -webkit-calc(50% - 70px);
+  top: calc(50% - 70px);
+  width: 100%; }
 
 .banner-btn {
   padding-left: 1px;
