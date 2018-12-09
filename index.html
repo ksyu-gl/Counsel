@@ -27,8 +27,6 @@
   <link rel="icon" type="image/png" href="img/favicons/favicons192.png" sizes="192x192">
   <link rel="icon" type="image/png" href="img/favicons/favicons96.png" sizes="96x96">
   <link rel="icon" type="image/png" href="img/favicons/favicons16.png" sizes="16x16">
-  <link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
 
   <!-- Main styles CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -37,9 +35,8 @@
 </head>
 
 <body>
-  <div class="main-bg"></div>
-  <div class="main">
-    <header class="header">
+  <header class="header">
+    <div class="header__content">
       <div class="container-fluide">
         <nav class="navbar navbar-expand-lg">
           <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Counsel"></a>
@@ -75,29 +72,48 @@
           </div>
         </nav>  
       </div>  
-    </header>
-    <section class="banner">
-      <div class="container-fluide">
-        <div class="banner-slide">
-          <div class="row">
-            <div class="col">
-              <div class="banner-btn">
-                <button class="banner-btn__prev" type="button">Previous</button>
-                <button class="banner-btn__next" type="button">Next</button>
-              </div>
-            </div>
-            <div class="col">
-              <div class="banner-content">
-                <div class="banner__bord"></div>
-                <div class="banner__rect"></div>
-                <h1 class="banner-content__title">Consumer Products Consulting</h1>
-                <a href="#" class="banner-content__link">Learn more</a>
-            </div>
+    </div>
+  </header>
+
+  <div id="carouselBanner" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item carousel-item-1 active">
+        <div class="container-fluide">
+          <div class="carousel-content float-right">
+            <div class="carousel__bord"></div>
+            <div class="carousel__rect"></div>
+            <h1 class="carousel-content__title">Consumer Products Consulting</h1>
+            <a href="#" class="carousel-content__link">Learn more</a>
           </div>
-          </div>
+        </div>
       </div>
-    </section>
+      <div class="carousel-item carousel-item-2">
+        <div class="container-fluide">
+          <div class="carousel-content float-right">
+            <div class="carousel__bord"></div>
+            <div class="carousel__rect"></div>
+            <h1 class="carousel-content__title">Working of technical capacity</h1>
+            <a href="#" class="carousel-content__link">Learn more</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item carousel-item-3">
+        <div class="container-fluide">
+          <div class="carousel-content float-right">
+            <div class="carousel__bord"></div>
+            <div class="carousel__rect"></div>
+            <h1 class="carousel-content__title">Services & Bussines Concept</h1>
+            <a href="#" class="carousel-content__link">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-control">
+      <a class="carousel-control-prev" href="#carouselBanner" role="button" data-slide="prev">Previous</a>
+      <a class="carousel-control-next" href="#carouselBanner" role="button" data-slide="next">Next</a>
+    </div>
   </div>
+
   <div class="layot">
     <section class="about">
       <div class="container-fluide">
@@ -110,7 +126,7 @@
           </div>
           <div class="col">
             <div class="col-img col-img_yellow col-img-right">
-              <p class="col-img__p"><img src="../img/picture.png" alt="people" class="about__img"></p>
+              <p class="col-img__p"><img src="img/picture.png" alt="people" class="about__img"></p>
             </div>
           </div>
         </div>
@@ -121,7 +137,7 @@
       <div class="container-fluide">
         <div class="row">
           <div class="col">
-            <img src="../img/graph.png" alt="graph" class="about__img--gray">
+            <img src="img/graph.png" alt="graph" class="about__img--gray">
           </div>
           <div class="col">
             <h2 class="title">Constructingthe  best in class global assets.</h2>
@@ -185,7 +201,7 @@
       <div class="container-fluide">
         <div class="row">
           <div class="col col-img_yellow col-img-left">
-            <p class="col-img__p"><a href=""><img src="../img/video.png" alt="people" class="about__img"></a></p>
+            <p class="col-img__p"><a href=""><img src="img/video.png" alt="people" class="about__img"></a></p>
           </div>
           <div class="col">
             <h2 class="title">Why  we best Consulting office in london ?</h2>
@@ -197,25 +213,33 @@
       </div>
     </section>
   
-    <section class="review">
+    <section class="review text-center">
       <div class="container-fluide">
-        <div class="review__block text-center">
-          <div>
-            <div class="review__pic"></div>
-            <p class="review__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit Seddo eiusmod tempor incididunt ut labore Standard Dummy aliqua. Utenim adminim veniam, quis nostrud exercitation ullamco laboris nisi ut Unknown Printer The Commodo consequat. Duis aute irure dolor. Voluptate velit esse cillum dolore eu fugiat nullapariatur.</p>  
-            <p class="review__author">SAM ISBISTER</p>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner review-slider">
+            <div class="carousel-item active">
+              <div>
+                <div class="review-slider__pic"></div>
+                <p class="review-slider__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit Seddo eiusmod tempor incididunt ut labore Standard Dummy aliqua. Utenim adminim veniam, quis nostrud exercitation ullamco laboris nisi ut Unknown Printer The Commodo consequat. Duis aute irure dolor. Voluptate velit esse cillum dolore eu fugiat nullapariatur.</p>  
+                <p class="review-slider__author">SAM ISBISTER</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div>
+                <div class="review-slider__pic"></div>
+                <p class="review-slider__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit Seddo eiusmod tempor incididunt ut labore Standard Dummy aliqua. Utenim adminim veniam, quis nostrud exercitation ullamco laboris nisi ut Unknown Printer The Commodo consequat. Duis aute irure dolor. Voluptate velit esse cillum dolore eu fugiat nullapariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit Seddo eiusmod tempor incididunt ut labore Standard Dummy aliqua. Utenim adminim veniam, quis nostrud exercitation ullamco laboris nisi ut Unknown Printer The Commodo consequat. Duis aute irure dolor. Voluptate velit esse cillum dolore eu fugiat nullapariatur.</p>  
+                <p class="review-slider__author">KATE HIDDEN</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div>
+                <div class="review-slider__pic"></div>
+                <p class="review-slider__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit Seddo eiusmod tempor incididunt ut labore Standard Dummy aliqua. Utenim adminim veniam, quis nostrud exercitation ullamco laboris nisi ut Unknown Printer The Commodo consequat. Duis aute irure dolor. Voluptate velit esse cillum dolore eu fugiat nullapariatur.</p>  
+                <p class="review-slider__author">CARL SMIT</p>
+              </div>
+            </div>
           </div>
-          <div>
-            <div class="review__pic"></div>
-            <p class="review__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit Seddo eiusmod tempor incididunt ut labore Standard Dummy aliqua. Utenim adminim veniam, quis nostrud exercitation ullamco laboris nisi ut Unknown Printer The Commodo consequat. Duis aute irure dolor. Voluptate velit esse cillum dolore eu fugiat nullapariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit Seddo eiusmod tempor incididunt ut labore Standard Dummy aliqua. Utenim adminim veniam, quis nostrud exercitation ullamco laboris nisi ut Unknown Printer The Commodo consequat. Duis aute irure dolor. Voluptate velit esse cillum dolore eu fugiat nullapariatur.</p>  
-            <p class="review__author">KATE HIDDEN</p>
-          </div>
-          <div>
-            <div class="review__pic"></div>
-            <p class="review__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit Seddo eiusmod tempor incididunt ut labore Standard Dummy aliqua. Utenim adminim veniam, quis nostrud exercitation ullamco laboris nisi ut Unknown Printer The Commodo consequat. Duis aute irure dolor. Voluptate velit esse cillum dolore eu fugiat nullapariatur.</p>  
-            <p class="review__author">CARL SMIT</p>
-          </div>
-        </div>  
+        </div> 
       </div>
     </section>
   
@@ -294,7 +318,7 @@
           <div class="form-container">
             <div id="note"></div>
             <div id="fields">
-              <form action="" id="ajax-contact-form">
+              <form action="contact.php" id="ajax-contact-form">
                 <input type="text" placeholder="Your name" class="form-control">
                 <input type="email" placeholder="Your email" class="form-control">
                 <textarea type="text" placeholder="Your comment" class="form-control"></textarea>
@@ -312,7 +336,6 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script src="slick/slick/slick.min.js"></script>
   <script src="js/contactform.js"></script>
   <script src="js/script.js"></script>
 </body>
