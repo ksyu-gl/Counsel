@@ -1,3 +1,14 @@
+//NAVIGATION
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 1) {
+        $('.header__content').addClass('sticky');
+    } else {
+        $('.header__content').removeClass('sticky');
+    }
+});
+
+
 // YANDEX
 
 ymaps.ready(init);
