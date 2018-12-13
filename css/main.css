@@ -357,7 +357,8 @@ p {
 
 @media (max-width: 700px) {
   .row-description {
-    display: inherit; } }
+    display: inherit;
+    text-align: center !important; } }
 
 .img-inner {
   position: relative;
@@ -365,6 +366,10 @@ p {
   height: 190px;
   overflow: hidden;
   margin-bottom: 16px; }
+  @media (max-width: 700px) {
+    .img-inner {
+      max-width: 400px;
+      margin: 0 auto 30px; } }
   .img-inner img {
     position: absolute;
     top: 50%;
@@ -384,18 +389,27 @@ p {
           background-size: cover;
   background-repeat: no-repeat;
   padding: 130px 0 118px; }
+  @media (max-width: 700px) {
+    .block_bg {
+      padding: 100px 0 80px; } }
 
 .data {
   font-size: 14px;
   text-transform: uppercase;
   color: #ffffff;
   letter-spacing: 2.8px; }
+  @media (max-width: 700px) {
+    .data {
+      font-size: 11px; } }
   .data span {
     display: block;
     margin: 0 0 6px 0;
     font-family: "Montserrat", sans-serif;
     font-size: 48px;
     letter-spacing: 9px; }
+    @media (max-width: 700px) {
+      .data span {
+        font-size: 30px; } }
 
 /*----------------- REVIEW -----------------*/
 .review {
