@@ -28,6 +28,9 @@ a:hover {
   max-width: 1200px;
   margin: 0 auto; }
 
+p {
+  font-family: "Segoe UI Emoji"; }
+
 /*----------------- HEADER & BANNER -----------------*/
 .header {
   position: relative; }
@@ -265,9 +268,6 @@ a:hover {
 .about_gray {
   background-color: #f4f4f4; }
 
-p {
-  font-family: "Segoe UI Emoji"; }
-
 .title {
   margin-bottom: 19px;
   font-size: 31px;
@@ -281,6 +281,9 @@ p {
   line-height: 1.2;
   color: #333333;
   max-width: 520px; }
+  @media (max-width: 1035px) {
+    .subtitle {
+      max-width: 100%; } }
 
 .text {
   margin-bottom: 45px; }
@@ -317,17 +320,37 @@ p {
     height: 550px;
     background-color: #fde52c;
     z-index: 0; }
+    @media (max-width: 1035px) {
+      .col-img__p::before {
+        display: none; } }
 
 .col-img-left p {
   float: left; }
 
+@media (max-width: 1035px) {
+  .row_media-block {
+    display: inherit;
+    text-align: center; } }
+
 /*----------------- BLOCK_BLUE -----------------*/
 .col-form {
   text-align: right; }
+  @media (max-width: 800px) {
+    .col-form {
+      text-align: center; } }
 
 @media (max-width: 800px) {
-  .block-form {
-    display: inherit; } }
+  .col_media-center {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%; } }
+
+@media (max-width: 800px) {
+  .row-form {
+    display: inherit;
+    text-align: center; } }
 
 .block_blue {
   padding: 20px 0;
@@ -338,6 +361,9 @@ p {
   font-size: 21px;
   color: #ffffff;
   margin: 0; }
+  @media (max-width: 800px) {
+    .block__text {
+      padding-bottom: 20px; } }
 
 .btn {
   padding: 9px 17px;
