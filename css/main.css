@@ -325,6 +325,10 @@ p {
 .col-form {
   text-align: right; }
 
+@media (max-width: 800px) {
+  .block-form {
+    display: inherit; } }
+
 .block_blue {
   padding: 20px 0;
   background-color: #002e5b; }
