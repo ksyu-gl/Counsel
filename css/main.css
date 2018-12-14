@@ -59,6 +59,10 @@ p {
   .sticky .dropdown-toggle_english {
     display: none; }
 
+@media (max-width: 800px) {
+  .logo {
+    width: 100px; } }
+
 .navbar {
   -webkit-box-orient: inherit;
   -webkit-box-direction: inherit;
@@ -71,13 +75,19 @@ p {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 43px 0 0 0; }
-  @media (max-width: 400px) {
-    .navbar-brand {
-      width: 140px; } }
+  @media (max-width: 800px) {
+    .navbar {
+      padding: 20px 0 0 0; } }
   .navbar-toggler-icon {
     width: 30px;
     height: 30px;
     background-image: url("../img/menu.svg"); }
+    @media (max-width: 800px) {
+      .navbar-toggler-icon {
+        width: 20px;
+        height: 20px; } }
+    .navbar-toggler-icon:focus {
+      outline: none; }
 
 .navbar-nav {
   -webkit-box-align: center;
@@ -148,7 +158,7 @@ p {
           background-size: cover; }
   @media (max-width: 900px) {
     .carousel-item {
-      padding: 170px 0; } }
+      padding: 150px 0; } }
 
 .carousel-item-1 {
   background-image: url("../img/main-bg1.png"); }
@@ -177,7 +187,7 @@ p {
   margin: 0 auto; }
   @media (max-width: 900px) {
     .carousel-control {
-      top: 400px;
+      top: 350px;
       bottom: 0;
       left: 0;
       -webkit-box-pack: center;
@@ -286,7 +296,8 @@ p {
     padding-top: 85px; }
     @media (max-width: 900px) {
       .carousel-content__title {
-        text-align: center; } }
+        text-align: center;
+        padding-top: 0; } }
     @media (max-width: 550px) {
       .carousel-content__title {
         font-size: 35px;
@@ -352,6 +363,9 @@ p {
 
 .text {
   margin-bottom: 45px; }
+  @media (max-width: 800px) {
+    .text {
+      margin-bottom: 25px; } }
 
 .link {
   padding-bottom: 4px;
