@@ -23,7 +23,7 @@ body {
 a:hover {
   text-decoration: none; }
 
-.container-fluide {
+.container-fluid {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto; }
@@ -122,32 +122,20 @@ p {
   opacity: 0.7;
   height: 100%; }
 
-.carousel-item-1 {
-  width: 100vw;
-  height: 100vh;
-  background-image: url("../img/main-bg1.png");
+.carousel-item {
+  padding: 300px 0;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
-          background-size: cover;
-  padding: 300px 0; }
+          background-size: cover; }
+
+.carousel-item-1 {
+  background-image: url("../img/main-bg1.png"); }
 
 .carousel-item-2 {
-  width: 100vw;
-  height: 100vh;
-  background-image: url("../img/main-bg2.png");
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-          background-size: cover;
-  padding: 300px 0; }
+  background-image: url("../img/main-bg2.png"); }
 
 .carousel-item-3 {
-  width: 100vw;
-  height: 100vh;
-  background-image: url("../img/main-bg3.png");
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-          background-size: cover;
-  padding: 300px 0; }
+  background-image: url("../img/main-bg3.png"); }
 
 .carousel-control {
   position: absolute;
@@ -309,6 +297,12 @@ p {
 .col-img__p {
   position: relative;
   float: right; }
+  @media (max-width: 1035px) {
+    .col-img__p {
+      float: none; } }
+  @media (max-width: 1035px) {
+    .col-img__p_right {
+      display: none; } }
   .col-img__p::before {
     content: "";
     position: absolute;
@@ -325,12 +319,20 @@ p {
         display: none; } }
 
 .col-img-left p {
-  float: left; }
+  float: left;
+  margin-bottom: 50px; }
+  @media (max-width: 1035px) {
+    .col-img-left p {
+      float: none; } }
 
 @media (max-width: 1035px) {
   .row_media-block {
     display: inherit;
     text-align: center; } }
+
+@media (max-width: 1035px) {
+  .about__img--gray {
+    margin-bottom: 50px; } }
 
 /*----------------- BLOCK_BLUE -----------------*/
 .col-form {
