@@ -83,6 +83,11 @@ p
 .navbar-collapse
   flex-grow: 0
 
+.collapse 
+  display: inherit
+  @media (max-width: 1000px)
+    display: none!important
+
 .nav-item
   padding: 4px 10px
   &:last-child 
@@ -239,6 +244,14 @@ p
   &:hover
     color: $white
     border-bottom: 2px solid $white
+
+#carouselExampleControls
+  .carousel
+    &-item 
+      padding: 0
+      @media (max-width: 900px)
+        padding: 0
+
 
 
 
@@ -492,9 +505,6 @@ p
   background-color: $white
   &__content
 
-.col_shadow
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.07)
-
 .subtitle_center
   max-width: 529px
   margin: 16px auto 46px
@@ -506,6 +516,14 @@ p
   color: $blue
   text-transform: uppercase
 
+.block-addres__list
+  @media (max-width: 850px)
+    display: flex
+    justify-content: space-between
+    padding: 0px 30px 30px 30px
+  @media (max-width: 550px)
+    display: inherit
+
 .block-addres__item
   list-style-type: none
   font-family: $segoe-font
@@ -515,6 +533,8 @@ p
   position: relative
   padding-left: 34px
   padding-bottom: 18px
+  @media (max-width: 850px)
+    padding-left: 21px
   &_nav
     max-width: 214px
     &::before
@@ -547,6 +567,20 @@ p
       width: 14px
       height: 14px
 
+.row-map
+  justify-content: space-between
+  @media (max-width: 850px)
+    display: inherit
+
+.col_shadow
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.07)
+
+.col-map
+  max-width: 30%
+  flex: 0 0 30%
+  @media (max-width: 850px)
+    max-width: 100%
+    flex: 0 0 100%
 
 
 /*----------------- FOOTER -----------------*/

@@ -84,6 +84,12 @@ p {
       -ms-flex-positive: 0;
           flex-grow: 0; }
 
+.collapse {
+  display: inherit; }
+  @media (max-width: 1000px) {
+    .collapse {
+      display: none !important; } }
+
 .nav-item {
   padding: 4px 10px; }
   .nav-item:last-child .nav-link {
@@ -246,6 +252,12 @@ p {
   .carousel-content__link:hover {
     color: #ffffff;
     border-bottom: 2px solid #ffffff; }
+
+#carouselExampleControls .carousel-item {
+  padding: 0; }
+  @media (max-width: 900px) {
+    #carouselExampleControls .carousel-item {
+      padding: 0; } }
 
 /*----------------- ABOUT -----------------*/
 .about {
@@ -502,10 +514,6 @@ p {
   padding: 100px 0;
   background-color: #ffffff; }
 
-.col_shadow {
-  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.07);
-          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.07); }
-
 .subtitle_center {
   max-width: 529px;
   margin: 16px auto 46px; }
@@ -517,6 +525,22 @@ p {
   color: #002e5b;
   text-transform: uppercase; }
 
+@media (max-width: 850px) {
+  .block-addres__list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0px 30px 30px 30px; } }
+
+@media (max-width: 550px) {
+  .block-addres__list {
+    display: inherit; } }
+
 .block-addres__item {
   list-style-type: none;
   font-family: "Segoe UI Emoji";
@@ -526,6 +550,9 @@ p {
   position: relative;
   padding-left: 34px;
   padding-bottom: 18px; }
+  @media (max-width: 850px) {
+    .block-addres__item {
+      padding-left: 21px; } }
   .block-addres__item_nav {
     max-width: 214px; }
     .block-addres__item_nav::before {
@@ -558,6 +585,33 @@ p {
             background-size: cover;
     width: 14px;
     height: 14px; }
+
+.row-map {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  @media (max-width: 850px) {
+    .row-map {
+      display: inherit; } }
+
+.col_shadow {
+  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.07); }
+
+.col-map {
+  max-width: 30%;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 30%;
+      -ms-flex: 0 0 30%;
+          flex: 0 0 30%; }
+  @media (max-width: 850px) {
+    .col-map {
+      max-width: 100%;
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 100%;
+          -ms-flex: 0 0 100%;
+              flex: 0 0 100%; } }
 
 /*----------------- FOOTER -----------------*/
 .footer {
