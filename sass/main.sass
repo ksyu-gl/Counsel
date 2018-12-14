@@ -76,6 +76,13 @@ p
   width: 100%
   justify-content: space-between
   padding: 43px 0 0 0
+  &-brand
+    @media (max-width: 400px)
+      width: 140px
+  &-toggler-icon
+    width: 30px
+    height: 30px
+    background-image: url("../img/menu.svg")
 
 .navbar-nav
   align-items: center
@@ -117,6 +124,9 @@ p
 
     
 .carousel
+  &-inner
+    & .active
+      display: flex
   &-banner
     &::before
       content: ""
@@ -133,22 +143,18 @@ p
     padding: 300px 0
     background-repeat: no-repeat
     background-size: cover
+    @media (max-width: 900px)
+      padding: 170px 0
   &-item-1
-    // width: 100vw
-    // height: 100vh
     background-image: url("../img/main-bg1.png")
   &-item-2
-    // width: 100vw
-    // height: 100vh
     background-image: url("../img/main-bg2.png")
   &-item-3
-    // width: 100vw
-    // height: 100vh
     background-image: url("../img/main-bg3.png")
 
   &-control
     position: absolute
-    top: 50%
+    top: 40%
     left: 0
     right: 0
     display: flex
@@ -156,6 +162,11 @@ p
     width: 100%
     max-width: 1200px
     margin: 0 auto
+    @media (max-width: 900px)
+      top: 400px
+      bottom: 0
+      left: 0
+      justify-content: center
     a 
       position: relative
       margin-top: 100px
@@ -169,19 +180,21 @@ p
       text-transform: uppercase 
       transition: 0.3s
       opacity: 1
+      @media (max-width: 900px)
+        margin-top: 0
       &:hover
         cursor: pointer
         color: $white
       &:focus
         outline: none
     &-prev 
-      padding-left: 62px
+      display: flex
       padding-right: 0
       &::before
         content: ""
         position: absolute
-        left: 19px
-        top: -2px
+        left: -40px
+        top: calc(50% - 11px)
         display: block
         background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgNDkzLjM1MyA0OTMuMzUyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0OTMuMzUzIDQ5My4zNTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8cGF0aCBkPSJNNDkwLjc4NiwyMTIuNjc4Yy0xLjcxOC0xLjcxMy0zLjkwMS0yLjU2OC02LjU3LTIuNTY4SDEyNy45MDd2LTYzLjk1M2MwLTMuODA5LTEuODEyLTYuNTY3LTUuNDI0LTguMjggICBjLTMuNjIxLTEuNTIxLTYuOTUyLTAuOTQ5LTkuOTk1LDEuNzEzTDIuODUzLDI0MC42NThDMC45NSwyNDIuNTY0LDAsMjQ0Ljg0OCwwLDI0Ny41MTFjMCwyLjQ3NCwwLjk1LDQuNjY1LDIuODUzLDYuNTY3ICAgbDEwOS42MzYsOTkuOTI4YzMuMDQ2LDIuNDc0LDYuMzc3LDIuOTU2LDkuOTk1LDEuNDI3YzMuNjEyLTEuNTIsNS40MjQtNC4yNzgsNS40MjQtOC4yNzh2LTYzLjk1M2gzNTYuMzE1ICAgYzIuNjYzLDAsNC44NTQtMC44NTksNi41NjQtMi41NjdjMS43MTEtMS43MTEsMi41NjYtMy44OTcsMi41NjYtNi41NjN2LTU0LjgyMUM0OTMuMzU2LDIxNi41ODYsNDkyLjQ5NywyMTQuMzkzLDQ5MC43ODYsMjEyLjY3OHoiIGZpbGw9IiNmZGU0MjgiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K")
         background-size: cover
@@ -195,13 +208,14 @@ p
         margin: 0 11px
 
     &-next
+      display: flex
       padding-left: 0
       margin-left: -4px 
       &::after
         content: ""
         position: absolute
         left: 47px
-        top: -2px
+        top: calc(50% - 11px)
         display: block
         background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgNDkzLjM1NiA0OTMuMzU2IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0OTMuMzU2IDQ5My4zNTY7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8cGF0aCBkPSJNNDkwLjQ5OCwyMzkuMjc4bC0xMDkuNjMyLTk5LjkyOWMtMy4wNDYtMi40NzQtNi4zNzYtMi45NS05Ljk5My0xLjQyN2MtMy42MTMsMS41MjUtNS40MjcsNC4yODMtNS40MjcsOC4yODJ2NjMuOTU0SDkuMTM2ICAgYy0yLjY2NiwwLTQuODU2LDAuODU1LTYuNTY3LDIuNTY4QzAuODU5LDIxNC40MzgsMCwyMTYuNjI4LDAsMjE5LjI5MnY1NC44MTZjMCwyLjY2MywwLjg1NSw0Ljg1MywyLjU2OCw2LjU2MyAgIGMxLjcxNSwxLjcxMiwzLjkwNSwyLjU2Nyw2LjU2NywyLjU2N2gzNTYuMzEzdjYzLjk1M2MwLDMuODEyLDEuODE3LDYuNTcsNS40MjgsOC4yNzhjMy42MiwxLjUyOSw2Ljk1LDAuOTUxLDkuOTk2LTEuNzA4ICAgbDEwOS42MzItMTAxLjA3N2MxLjkwMy0xLjkwMiwyLjg1Mi00LjE4MiwyLjg1Mi02Ljg0OUM0OTMuMzU2LDI0My4zNjcsNDkyLjQwMSwyNDEuMTgxLDQ5MC40OTgsMjM5LjI3OHoiIGZpbGw9IiNmZGU0MjgiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K")
         background-size: cover
@@ -215,6 +229,11 @@ p
   max-width: 566px
   padding-right: 224px
   position: relative
+  @media (max-width: 900px)
+    padding-right: 15px
+    max-width: 100%
+    text-align: center
+    margin: 0 auto
   &__svg
     display: block
     width: 300px
@@ -222,6 +241,8 @@ p
     position: absolute
     top: 0px
     right: 23px
+    @media (max-width: 900px)
+      display: none
   &__title
     position: relative
     margin: 0 0 35px 0
@@ -232,6 +253,11 @@ p
     letter-spacing: 0.1px
     text-align: right
     padding-top: 85px
+    @media (max-width: 900px)
+      text-align: center
+    @media (max-width: 550px)
+      font-size: 35px
+      margin: 0 0 15px 0
 
 .carousel-content__link
   position: relative
@@ -262,9 +288,13 @@ p
   padding: 95px 0 106px
   background-color: $white
   overflow: hidden
+  @media (max-width: 550px)
+    padding: 50px 0
 
 .about_gray
   background-color: #f4f4f4
+  @media (max-width: 550px)
+    padding: 50px 0
 
 .title
   margin-bottom: 19px
@@ -273,6 +303,8 @@ p
   color: $blue
   line-height: 1
   text-transform: uppercase
+  @media (max-width: 550px)
+    font-size: 25px
 
 .subtitle
   font-size: 21px
@@ -281,6 +313,8 @@ p
   max-width: 520px
   @media (max-width: 1035px)
     max-width: 100%
+  @media (max-width: 550px)
+    font-size: 18px
 
 .text
   margin-bottom: 45px
@@ -295,10 +329,19 @@ p
   &:hover
     color: $blue
     border-bottom: 2px solid transparent
+  @media (max-width: 550px)
+    font-size: 15px
 
 .about__img
   position: relative
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.3)
+  @media (max-width: 550px)
+    width: 100%
+  &_gray
+    @media (max-width: 1035px)
+      margin-bottom: 50px
+    @media (max-width: 550px)
+      width: 100%
 
 .col-img
   &__p
@@ -334,9 +377,7 @@ p
     display: inherit
     text-align: center
 
-.about__img--gray 
-  @media (max-width: 1035px)
-    margin-bottom: 50px
+
 
 /*----------------- BLOCK_BLUE -----------------*/
 
@@ -367,6 +408,8 @@ p
   margin: 0
   @media (max-width: 800px)
     padding-bottom: 20px
+  @media (max-width: 550px)
+    font-size: 18px
 
 .btn
   padding: 9px 17px
@@ -375,6 +418,8 @@ p
   text-transform: uppercase
   background-color: $yellow
   border-radius: 3px
+  @media (max-width: 550px)
+    font-size: 15px
 
 
 
@@ -383,12 +428,16 @@ p
 .services
   padding: 100px 0 60px
   background-color: $white
+  @media (max-width: 550px)
+    padding: 50px 0
 
 .services__title
   font-size: 21px
   font-weight: 700
   text-transform: uppercase
   color: $blue
+  @media (max-width: 550px)
+    font-size: 18px
 
 .row-description
   @media (max-width: 700px)
@@ -425,7 +474,7 @@ p
   background-repeat: no-repeat
   padding: 130px 0 118px
   @media (max-width: 700px)
-    padding: 100px 0 80px
+    padding: 80px 0
 
 .data
   font-size: 14px
@@ -454,6 +503,8 @@ p
   background-size: cover
   background-repeat: no-repeat
   color: $white
+  @media (max-width: 550px)
+    padding: 50px 0
   &-slider
     margin: 0 auto
     max-width: 760px
@@ -472,6 +523,9 @@ p
   font-size: 20px
   line-height: 1.85
   font-weight: 400
+  @media (max-width: 550px)
+    font-size: 18px
+    padding-bottom: 40px
 
 .review-slider__author
   position: relative
@@ -498,12 +552,14 @@ p
     background-color: $white
 
 
+
 /*----------------- BLOCK-ADDRES -----------------*/
 
 .block-addres
   padding: 100px 0
   background-color: $white
-  &__content
+  @media (max-width: 550px)
+    padding: 50px 0
 
 .subtitle_center
   max-width: 529px
@@ -587,14 +643,23 @@ p
 
 .footer
   padding: 33px 0
+  @media (max-width: 400px)
+    padding: 15px 0
+
+.row-footer
+  @media (max-width: 400px)
+    display: inherit
 
 .copyright
   font-family: $primary-font
   color: $white
   margin-bottom: 0
+  @media (max-width: 400px)
+    text-align: center
   a
     color: $yellow
 
+.social-icons
 
 .social-icons__list
   display: flex
@@ -602,6 +667,10 @@ p
   align-items: center
   margin-bottom: 0
   list-style-type: none
+  @media (max-width: 400px)
+    display: inherit
+    text-align: center
+    padding-left: 0
 
 .social-icons__item
   display: inline-block
@@ -627,6 +696,9 @@ p
     width: 20px
     height: 20px
     background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzMTUgMzE1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMTUgMzE1OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPGcgaWQ9IlhNTElEXzUxMF8iPgoJPHBhdGggaWQ9IlhNTElEXzUxMV8iIGQ9Ik0zMDcuNSwxMzYuODkyaC0xOS43OTFWMTE3LjFjMC00LjE0My0zLjM1Ny03LjUtNy41LTcuNWgtMjYuNzE3Yy00LjE0MywwLTcuNSwzLjM1Ny03LjUsNy41djE5Ljc5MiAgIGgtMTkuNzkxYy00LjE0MywwLTcuNSwzLjM1Ny03LjUsNy41djI2LjcxN2MwLDQuMTQzLDMuMzU3LDcuNSw3LjUsNy41aDE5Ljc5MXYxOS43OTJjMCw0LjE0MiwzLjM1Nyw3LjUsNy41LDcuNWgyNi43MTcgICBjNC4xNDMsMCw3LjUtMy4zNTgsNy41LTcuNXYtMTkuNzkySDMwNy41YzQuMTQzLDAsNy41LTMuMzU3LDcuNS03LjV2LTI2LjcxN0MzMTUsMTQwLjI0OSwzMTEuNjQzLDEzNi44OTIsMzA3LjUsMTM2Ljg5MnoiIGZpbGw9IiNGRkZGRkYiLz4KCTxwYXRoIGlkPSJYTUxJRF81MTJfIiBkPSJNMTAxLjkwNiwxMDQuMTZjOS4wODgsMCwxNy44MjMsMi40NSwyNS4yNzQsNy4wODdsOC41MTMsNS44MjVjMi45NjcsMi4wMyw2Ljk1OCwxLjY3MSw5LjUxNC0wLjg2MSAgIGwyNC44MjgtMjQuNTk2YzEuNTg5LTEuNTc0LDIuMzkyLTMuNzc0LDIuMTkxLTYuMDAxYy0wLjItMi4yMjctMS4zODQtNC4yNDgtMy4yMjgtNS41MTNsLTE0LjQzLTkuODk2ICAgYy0wLjI5NC0wLjIwMS0wLjYwMy0wLjM4Mi0wLjkyMi0wLjUzOWwtMTMuOTc5LTYuOTAyYy0wLjE4NS0wLjA5Mi0wLjM3NC0wLjE3Ni0wLjU2Ni0wLjI1MiAgIGMtMTIuMDQyLTQuNzU0LTI0LjcyOS03LjE2NS0zNy43MDgtNy4xNjVjLTI2Ljc1NywwLTUxLjk5NiwxMC4yNy03MS4wNjgsMjguOTE1Yy0xOS4zNjcsMTguOTM0LTMwLjEzNyw0NC42ODEtMzAuMzIzLDcyLjQ5OSAgIGMtMC4xODcsMjcuODI0LDEwLjIzOSw1My43MiwyOS4zNTUsNzIuOTE2YzE4Ljk2OCwxOS4wNDksNDUuODc5LDI5Ljk3NSw3My44MzQsMjkuOTc1YzI3LjY1OCwwLDUzLjYwOC0xMC43MzksNzEuMTk1LTI5LjQ2MyAgIGMxMy45MzEtMTQuODMxLDIyLjQ4LTM0LjY0MSwyNC43MjctNTcuMjg4YzAuMDIxLTAuMjE1LDAuMDM0LTAuNDMsMC4wMzYtMC42NDVsMC4yNi0yMC4zNDVjMC4wMDYtMC40MjEtMC4wMjQtMC44NDEtMC4wOS0xLjI1NyAgIGwtMS4wOS02Ljk1M2MtMC41NzEtMy42NDktMy43MTYtNi4zMzktNy40MDktNi4zMzloLTg2LjY3MmMtNC4xNDMsMC03LjUsMy4zNTgtNy41LDcuNXYyOS45ODJjMCw0LjE0MiwzLjM1Nyw3LjUsNy41LDcuNWg0NC4xODYgICBjLTIuMDI1LDQuNDM5LTUuMjE2LDkuMTItOS4yNTEsMTMuNDgyYy04LjgwMSw5LjUxOC0yMS45MjYsMTQuOTc3LTM2LjAxLDE0Ljk3N2MtMTQuMzgzLDAtMjguMTU3LTUuNjM2LTM3Ljc5LTE1LjQ2MiAgIGMtMjAuMDUyLTIwLjQ0OC0xOS44MjItNTYuMDc3LDAuNDg5LTc2LjI0NUM3NS4zMzQsMTA5LjYwNSw4OC41MDUsMTA0LjE2LDEwMS45MDYsMTA0LjE2eiIgZmlsbD0iI0ZGRkZGRiIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=")
+    @media (max-width: 400px)
+      display: inline-block
+      vertical-align: top
     &:hover, &:active
       background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzMTUgMzE1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMTUgMzE1OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPGcgaWQ9IlhNTElEXzUxMF8iPgoJPHBhdGggaWQ9IlhNTElEXzUxMV8iIGQ9Ik0zMDcuNSwxMzYuODkyaC0xOS43OTFWMTE3LjFjMC00LjE0My0zLjM1Ny03LjUtNy41LTcuNWgtMjYuNzE3Yy00LjE0MywwLTcuNSwzLjM1Ny03LjUsNy41djE5Ljc5MiAgIGgtMTkuNzkxYy00LjE0MywwLTcuNSwzLjM1Ny03LjUsNy41djI2LjcxN2MwLDQuMTQzLDMuMzU3LDcuNSw3LjUsNy41aDE5Ljc5MXYxOS43OTJjMCw0LjE0MiwzLjM1Nyw3LjUsNy41LDcuNWgyNi43MTcgICBjNC4xNDMsMCw3LjUtMy4zNTgsNy41LTcuNXYtMTkuNzkySDMwNy41YzQuMTQzLDAsNy41LTMuMzU3LDcuNS03LjV2LTI2LjcxN0MzMTUsMTQwLjI0OSwzMTEuNjQzLDEzNi44OTIsMzA3LjUsMTM2Ljg5MnoiIGZpbGw9IiNmZGU0MjgiLz4KCTxwYXRoIGlkPSJYTUxJRF81MTJfIiBkPSJNMTAxLjkwNiwxMDQuMTZjOS4wODgsMCwxNy44MjMsMi40NSwyNS4yNzQsNy4wODdsOC41MTMsNS44MjVjMi45NjcsMi4wMyw2Ljk1OCwxLjY3MSw5LjUxNC0wLjg2MSAgIGwyNC44MjgtMjQuNTk2YzEuNTg5LTEuNTc0LDIuMzkyLTMuNzc0LDIuMTkxLTYuMDAxYy0wLjItMi4yMjctMS4zODQtNC4yNDgtMy4yMjgtNS41MTNsLTE0LjQzLTkuODk2ICAgYy0wLjI5NC0wLjIwMS0wLjYwMy0wLjM4Mi0wLjkyMi0wLjUzOWwtMTMuOTc5LTYuOTAyYy0wLjE4NS0wLjA5Mi0wLjM3NC0wLjE3Ni0wLjU2Ni0wLjI1MiAgIGMtMTIuMDQyLTQuNzU0LTI0LjcyOS03LjE2NS0zNy43MDgtNy4xNjVjLTI2Ljc1NywwLTUxLjk5NiwxMC4yNy03MS4wNjgsMjguOTE1Yy0xOS4zNjcsMTguOTM0LTMwLjEzNyw0NC42ODEtMzAuMzIzLDcyLjQ5OSAgIGMtMC4xODcsMjcuODI0LDEwLjIzOSw1My43MiwyOS4zNTUsNzIuOTE2YzE4Ljk2OCwxOS4wNDksNDUuODc5LDI5Ljk3NSw3My44MzQsMjkuOTc1YzI3LjY1OCwwLDUzLjYwOC0xMC43MzksNzEuMTk1LTI5LjQ2MyAgIGMxMy45MzEtMTQuODMxLDIyLjQ4LTM0LjY0MSwyNC43MjctNTcuMjg4YzAuMDIxLTAuMjE1LDAuMDM0LTAuNDMsMC4wMzYtMC42NDVsMC4yNi0yMC4zNDVjMC4wMDYtMC40MjEtMC4wMjQtMC44NDEtMC4wOS0xLjI1NyAgIGwtMS4wOS02Ljk1M2MtMC41NzEtMy42NDktMy43MTYtNi4zMzktNy40MDktNi4zMzloLTg2LjY3MmMtNC4xNDMsMC03LjUsMy4zNTgtNy41LDcuNXYyOS45ODJjMCw0LjE0MiwzLjM1Nyw3LjUsNy41LDcuNWg0NC4xODYgICBjLTIuMDI1LDQuNDM5LTUuMjE2LDkuMTItOS4yNTEsMTMuNDgyYy04LjgwMSw5LjUxOC0yMS45MjYsMTQuOTc3LTM2LjAxLDE0Ljk3N2MtMTQuMzgzLDAtMjguMTU3LTUuNjM2LTM3Ljc5LTE1LjQ2MiAgIGMtMjAuMDUyLTIwLjQ0OC0xOS44MjItNTYuMDc3LDAuNDg5LTc2LjI0NUM3NS4zMzQsMTA5LjYwNSw4OC41MDUsMTA0LjE2LDEwMS45MDYsMTA0LjE2eiIgZmlsbD0iI2ZkZTQyOCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=")
   &_inst
