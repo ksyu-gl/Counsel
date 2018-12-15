@@ -94,11 +94,9 @@ p
 
 .navbar-collapse
   flex-grow: 0
-
-.collapse 
-  display: inherit
-  @media (max-width: 1000px)
-    display: none!important
+  @media (max-width: 991px)
+    background-color: $blue
+    padding: 60px
 
 .nav-item
   padding: 4px 10px
@@ -118,8 +116,12 @@ p
   transition: 0.3s
   &:hover
     color: $yellow
+  @media (max-width: 991px)
+    margin-bottom: 10px
 
 .dropdown-toggle_english
+  @media (max-width: 991px)
+    display: none
   span
     display: inline-block
     vertical-align: middle
@@ -127,7 +129,6 @@ p
     width: 31px
     height: 31px
 
-    
 .carousel
   &-inner
     & .active
@@ -399,7 +400,6 @@ p
     flex: 0 0 100%
     max-width: 100%
 
-
 .row-form
   @media (max-width: 800px)
     display: inherit
@@ -536,27 +536,30 @@ p
     padding-bottom: 40px
 
 .review-slider__author
+  display: table
   position: relative
+  margin: 0 auto
   font-family: $primary-font
   font-size: 14px
   font-weight: 700
   &::before
+    display: block
     content: ""
     width: 20px
     height: 2px
     position: absolute
-    display: block 
     top: calc(50% - 3px)
-    left: 300px
+    left: -28px
     background-color: $white
   &::after
+    display: block
     content: ""
     width: 20px
     height: 2px
     position: absolute
     display: block 
     top: calc(50% - 3px)
-    right: 300px
+    right: -28px
     background-color: $white
 
 
@@ -724,7 +727,7 @@ p
 
 .close
   position: absolute
-  top: calc(50% - 20px)
+  top: 11px
   right: 13px
   font-size: 40px
   font-weight: 400
