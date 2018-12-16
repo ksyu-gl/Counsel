@@ -134,7 +134,18 @@ p {
 .dropdown-toggle_english span {
   display: inline-block;
   vertical-align: middle;
-  background-image: url("../img/flag.svg");
+  background-image: url("../img/flag_english.svg");
+  width: 31px;
+  height: 31px; }
+
+@media (max-width: 991px) {
+  .dropdown-toggle_russian {
+    display: none; } }
+
+.dropdown-toggle_russian span {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url("../img/flag_russia.svg");
   width: 31px;
   height: 31px; }
 
@@ -189,7 +200,8 @@ p {
           justify-content: flex-start;
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding-left: 50px; }
   @media (max-width: 900px) {
     .carousel-control {
       top: 350px;
@@ -270,7 +282,7 @@ p {
 
 .carousel-content {
   text-align: right;
-  max-width: 566px;
+  width: 600px;
   padding-right: 224px;
   position: relative; }
   @media (max-width: 900px) {
@@ -407,7 +419,8 @@ p {
   float: right; }
   @media (max-width: 1035px) {
     .col-img__p {
-      float: none; } }
+      float: none;
+      margin-bottom: 40px; } }
   @media (max-width: 1035px) {
     .col-img__p_right {
       display: none; } }
@@ -855,3 +868,55 @@ p {
     cursor: pointer; }
   .form-button:focus {
     outline: none; }
+
+.video__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.video__media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none; }
+
+.video__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  display: none;
+  padding: 0;
+  width: 68px;
+  height: 48px;
+  border: none;
+  background-color: transparent;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  cursor: pointer; }
+
+.video__button-shape {
+  fill: #212121;
+  fill-opacity: 0.8; }
+
+.video__button-icon {
+  fill: #ffffff; }
+
+.video__button:focus {
+  outline: none; }
+
+.video:hover .video__button-shape,
+.video__button:focus .video__button-shape {
+  fill: #ff0000;
+  fill-opacity: 1; }
+
+.video--enabled {
+  cursor: pointer; }
+
+.video--enabled .video__button {
+  display: block; }
